@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    background: url('img/fondo.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+h1 {
+    margin: 20px 0;
+    text-shadow: 2px 2px 5px black;
+}
+
+#nivel-selector button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 12px;
+    background-color: #fff;
+    color: #111;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#nivel-selector button:hover {
+    transform: scale(1.1);
+}
+
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-image: url('img/carta.jpeg'); /* tu imagen para el dorso */
+    background-size: cover;
+    border: 2px solid white;
+    cursor: pointer;
+    position: relative;
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+
+.card img {
+    width: 100%;
+    height: 100%;
+    display: none;
+    object-fit: cover;
+}
+
+.card.flipped img {
+    display: block;
+}

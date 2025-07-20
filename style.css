@@ -1,18 +1,12 @@
 body {
-    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    background: url('img/fondo.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
 }
-
-@media (max-width: 600px) {
-    body {
-        font-size: 14px;
-    }
-
-    #nivel-selector button {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
-}
-
 
 h1 {
     margin: 20px 0;
@@ -38,18 +32,16 @@ h1 {
 
 .game-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    gap: 10px;
-    padding: 10px;
-    max-width: 500px;
-    margin: 0 auto;
+    grid-template-columns: repeat(4, 100px);
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
 }
 
-
 .card {
-    width: 100%;
-    aspect-ratio: 1 / 1; /* 🔥 Esto hace que la carta siempre sea cuadrada */
-    background-image: url('img/fondoCarta.jpeg');
+    width: 100px;
+    height: 100px;
+    background-image: url('img/carta.jpeg'); /* tu imagen para el dorso */
     background-size: cover;
     border: 2px solid white;
     cursor: pointer;
@@ -57,7 +49,6 @@ h1 {
     perspective: 1000px;
     overflow: hidden;
 }
-
 
 
 .card img {

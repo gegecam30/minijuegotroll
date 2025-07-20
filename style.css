@@ -32,22 +32,33 @@ h1 {
 
 .game-container {
     display: grid;
-    grid-template-columns: repeat(4, 100px);
-    gap: 15px;
-    justify-content: center;
-    margin-top: 30px;
+    gap: 10px;
+    padding: 10px;
+    margin: 0 auto;
+    justify-items: center;
+    max-width: 420px;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
 }
 
+@media (min-width: 800px) {
+    .game-container {
+        grid-template-columns: repeat(4, 100px);
+    }
+}
+
+
+
 .card {
-    width: 100px;
-    height: 100px;
-    background-image: url('img/carta.jpeg'); /* tu imagen para el dorso */
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-image: url('img/fondoCarta.jpeg');
     background-size: cover;
     border: 2px solid white;
     cursor: pointer;
     position: relative;
     perspective: 1000px;
     overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
 
